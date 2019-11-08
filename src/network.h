@@ -106,7 +106,8 @@ void update_network_gpu(network net);
 
 float get_current_rate(network net);
 int get_current_batch(network net);
-void free_network(network net);
+void _free_network(network net);
+void free_network(network *net);
 void compare_networks(network n1, network n2, data d);
 char *get_layer_string(LAYER_TYPE a);
 

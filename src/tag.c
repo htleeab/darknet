@@ -84,7 +84,7 @@ void train_tag(char *cfgfile, char *weightfile, int clear)
 
     pthread_join(load_thread, 0);
     free_data(buffer);
-    free_network(net);
+    _free_network(net);
     free_ptrs((void**)paths, plist->size);
     free_list(plist);
     free(base);

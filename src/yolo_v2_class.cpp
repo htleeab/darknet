@@ -164,7 +164,7 @@ LIB_API Detector::~Detector()
     cuda_set_device(detector_gpu.net.gpu_index);
 #endif
 
-    free_network(detector_gpu.net);
+    _free_network(detector_gpu.net);
 
 #ifdef GPU
     cudaSetDevice(old_gpu_index);
